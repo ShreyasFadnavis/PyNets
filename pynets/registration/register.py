@@ -8,7 +8,6 @@ Copyright (C) 2017
 import os
 import nibabel as nib
 import warnings
-import indexed_gzip
 import numpy as np
 from pynets.registration import reg_utils as regutils
 from nilearn.image import math_img
@@ -319,7 +318,7 @@ def direct_streamline_norm(streams, fa_path, ap_path, dir_path, track_type, targ
                              origin=Origin.TRACKVIS)
     stf.remove_invalid_streamlines()
     streams_final_filt_final = stf.streamlines
-    save_tractogram(stf, streams_mni, bbox_valid_check=True)
+    save_tractogram(stf, streams_mni, bbox_valid_check=False)
     warped_fa_img.uncache()
 
     # DSN QC plotting

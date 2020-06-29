@@ -7,7 +7,6 @@ Copyright (C) 2017
 """
 import warnings
 import numpy as np
-import indexed_gzip
 import nibabel as nib
 from nipype.interfaces.base import (BaseInterface, BaseInterfaceInputSpec, TraitedSpec, File, traits, SimpleInterface,
                                     Directory)
